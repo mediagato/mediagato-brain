@@ -87,7 +87,10 @@ async function init(dataDir) {
   `);
 
   _ready = true;
-  console.log(`[brain] PGlite initialized at ${_dbPath}`);
+  // Log to stderr so MCP servers using stdio transport don't see the message
+  // on stdout. Electron consumers (Companion) capture both streams via their
+  // own logger, so this is a no-op for them.
+  console.error(`[brain] PGlite initialized at ${_dbPath}`);
   return _db;
 }
 
@@ -230,7 +233,7 @@ async function seedFromSpore(sporeData) {
     ON CONFLICT(key) DO UPDATE SET value = EXCLUDED.value
   `, [ts]);
 
-  console.log(`[brain] seeded ${count} items from Spore`);
+  console.error(`[brain] seeded ${count} items from Spore`);
   return count;
 }
 
@@ -248,7 +251,7 @@ async function close() {
     await _db.close();
     _db = null;
     _ready = false;
-    console.log('[brain] closed');
+    console.error('[brain] closed');
   }
 }
 
