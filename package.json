@@ -1,0 +1,34 @@
+{
+  "name": "@mediagato/brain",
+  "version": "0.1.0",
+  "description": "Local-first PGlite brain — state, memories, steering, spore seeding. Shared engine across Companion, Inkwell, and any MEDiAGATO product that needs persistent local memory.",
+  "main": "src/index.js",
+  "files": [
+    "src/",
+    "README.md",
+    "LICENSE"
+  ],
+  "scripts": {
+    "test": "node --test test/*.test.js"
+  },
+  "keywords": [
+    "pglite",
+    "postgres",
+    "memory",
+    "local-first",
+    "mcp",
+    "mediagato"
+  ],
+  "author": "Steve Kingsley <steve@mediagato.com>",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://repo.mediagato.com/steve/mediagato-brain.git"
+  },
+  "dependencies": {
+    "@electric-sql/pglite": "^0.2.0"
+  },
+  "engines": {
+    "node": ">=18"
+  }
+}
