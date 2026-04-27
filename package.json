@@ -1,6 +1,6 @@
 {
   "name": "@mediagato/brain",
-  "version": "0.1.2",
+  "version": "0.1.3",
   "description": "Local-first PGlite brain — state, memories, steering, spore seeding. Shared engine across Companion, Mr. Mags, and any MEDiAGATO product that needs persistent local memory.",
   "main": "src/index.js",
   "files": [

@@ -183,6 +183,11 @@ async function getAllMemories() {
   return result.rows;
 }
 
+async function deleteMemory(filename) {
+  _ensure();
+  await _db.query('DELETE FROM memories WHERE filename = $1', [filename]);
+}
+
 // ── Spore seed ────────────────────────────────────────────────────────────
 
 /**
@@ -266,6 +271,7 @@ module.exports = {
   deleteState,
   getMemory,
   setMemory,
+  deleteMemory,
   getAllMemories,
   seedFromSpore,
   isSeeded,

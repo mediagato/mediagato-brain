@@ -46,6 +46,18 @@ test('state round-trip: set, get, getAll, delete', async () => {
   await brain.close();
 });
 
+test('memory delete', async () => {
+  const dir = tmpDir();
+  await brain.init(dir);
+  await brain.setMemory('to_delete.md', '# Bye', 'test');
+  assert.ok(await brain.getMemory('to_delete.md'));
+  await brain.deleteMemory('to_delete.md');
+  assert.equal(await brain.getMemory('to_delete.md'), null);
+  // Deleting something that doesn't exist is a no-op (no throw)
+  await brain.deleteMemory('never_existed.md');
+  await brain.close();
+});
+
 test('memory round-trip: set, get, getAll', async () => {
   const dir = tmpDir();
   await brain.init(dir);
