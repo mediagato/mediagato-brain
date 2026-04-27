@@ -11,7 +11,7 @@ Intelligence data — memories, learned patterns, personal context — should li
 - **Layer distinction** between `instance` (user-created) and `pattern` (template-seeded)
 - **Spore seeding** for one-time setup with profession-specific patterns
 
-It is the load-bearing engine across MEDiAGATO products that need persistent local memory: Companion (worker fleet brain), Inkwell (memory-only product for Claude Desktop), and any future tool that wants the same primitive.
+It is the load-bearing engine across MEDiAGATO products that need persistent local memory: Companion (worker fleet brain), Mr. Mags (memory-only product for Claude Desktop, free for teachers forever — [mrmags.org](https://mrmags.org)), and any future tool that wants the same primitive.
 
 ## Install
 
