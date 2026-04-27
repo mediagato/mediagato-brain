@@ -1,6 +1,6 @@
 {
   "name": "@mediagato/brain",
-  "version": "0.1.3",
+  "version": "0.1.4",
   "description": "Local-first PGlite brain — state, memories, steering, spore seeding. Shared engine across Companion, Mr. Mags, and any MEDiAGATO product that needs persistent local memory.",
   "main": "src/index.js",
   "files": [
@@ -23,8 +23,10 @@
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "https://repo.mediagato.com/steve/mediagato-brain.git"
+    "url": "https://github.com/mediagato/mediagato-brain.git"
   },
+  "homepage": "https://github.com/mediagato/mediagato-brain",
+  "bugs": "https://github.com/mediagato/mediagato-brain/issues",
   "dependencies": {
     "@electric-sql/pglite": "^0.2.0"
   },
